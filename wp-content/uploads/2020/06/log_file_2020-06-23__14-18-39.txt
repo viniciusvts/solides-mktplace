@@ -1,0 +1,347 @@
+
+---Downloaded files---
+The import files for: themeplace Demo Import were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://solides_mktplace.localhost
+Data file = C:\xampp\htdocs\solides_mktplace/wp-content/themes/themeplace/inc/demo/content.xml
+Widget file = C:\xampp\htdocs\solides_mktplace/wp-content/themes/themeplace/inc/demo/widgets.wie
+Customizer file = C:\xampp\htdocs\solides_mktplace/wp-content/themes/themeplace/inc/demo/customizer.dat
+Redux files:
+themeplace_opt -> C:\xampp\htdocs\solides_mktplace/wp-content/themes/themeplace/inc/demo/redux.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+[WARNING] Failed to import "Submission Form": Invalid post type fes-forms
+[WARNING] Failed to import "Profile Form": Invalid post type fes-forms
+[WARNING] Failed to import "Registration Form": Invalid post type fes-forms
+[WARNING] Failed to import "Login Form": Invalid post type fes-forms
+[WARNING] Failed to import "Vendor Contact Form": Invalid post type fes-forms
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "newspotrika" (Mídia)
+[WARNING] Failed to import "Submission Form": Invalid post type fes-forms
+[WARNING] Failed to import "Profile Form": Invalid post type fes-forms
+[WARNING] Failed to import "Registration Form": Invalid post type fes-forms
+[WARNING] Failed to import "Login Form": Invalid post type fes-forms
+[WARNING] Failed to import "Vendor Contact Form": Invalid post type fes-forms
+
+
+---Importing widgets---
+Sidebar : 
+
+ThemePlace : Recent Post - No Title - Imported
+Categorias - No Title - Imported
+Agenda - Calender - Imported
+Nuvem de tags - No Title - Imported
+
+EDD Archive Sidebar : 
+
+ThemePlace : Download Filters - No Title - Imported
+Categorias / Tagas de Downloads - Categories - Imported
+
+Footer : 
+
+Texto - No Title - Imported
+Menu - Our Community - Imported
+Menu - Help and FAQs - Imported
+Mailchimp Sign-Up Form - Subscribe to Our Newsletter - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: themeplace_opt finished successfully!
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---pt-ocdi/after_import---
+
