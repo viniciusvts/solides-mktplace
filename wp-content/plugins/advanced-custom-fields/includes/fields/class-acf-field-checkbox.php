@@ -442,10 +442,8 @@ class acf_field_checkbox extends acf_field {
 
 	function update_field( $field ) {
 		
-		// Decode choices (convert to array).
-		$field['choices'] = acf_decode_choices( $field['choices'] );
-		$field['default_value'] = acf_decode_choices( $field['default_value'], true );
-		return $field;
+		return acf_get_field_type('select')->update_field( $field );
+		
 	}
 	
 	
@@ -559,16 +557,8 @@ class acf_field_checkbox extends acf_field {
 	
 	function format_value( $value, $post_id, $field ) {
 		
-		// Bail early if is empty.
-		if( acf_is_empty($value) ) {
-			return array();
-		}
-		
-		// Always convert to array of items.
-		$value = acf_array($value);
-		
-		// Return.
 		return acf_get_field_type('select')->format_value( $value, $post_id, $field );
+		
 	}
 	
 }
