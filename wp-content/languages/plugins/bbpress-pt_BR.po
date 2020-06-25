@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-06-24 18:01-0300\n"
+"PO-Revision-Date: 2020-06-25 13:07-0300\n"
 "Language-Team: ENGLISH <jjj@bbpress.org>\n"
 "X-Generator: Poedit 2.3.1\n"
 "Last-Translator: \n"
@@ -33,11 +33,11 @@ msgstr ""
 
 #: bbpress.php:711
 msgid "Most popular topics"
-msgstr ""
+msgstr "Tópicos populares"
 
 #: bbpress.php:724
 msgid "Topics with no replies"
-msgstr ""
+msgstr "Tópicos sem respostas"
 
 #: bbpress.php:761
 msgid "bbPress Item Count"
@@ -101,7 +101,7 @@ msgstr "Leia mais"
 
 #: includes/admin/classes/class-bbp-admin.php:235
 msgid "Hide For Now"
-msgstr ""
+msgstr "Esconder por enquanto"
 
 #: includes/admin/classes/class-bbp-admin.php:238
 msgid "bbPress requires a manual database upgrade. %s or %s."
@@ -184,16 +184,17 @@ msgstr "Inscrever-se no  fórum"
 
 #: includes/admin/classes/class-bbp-admin.php:1076
 msgid "Now your users can subscribe to new topics in specific forums."
-msgstr ""
+msgstr "Agora seus usuários podem se inscrever para novos tópicos nos fóruns."
 
 #: includes/admin/classes/class-bbp-admin.php:1080
 msgid "Manage Subscriptions"
-msgstr ""
+msgstr "Inscrições do fórum"
 
 #: includes/admin/classes/class-bbp-admin.php:1081
 msgid ""
 "Your users can manage all of their subscriptions in one convenient location."
 msgstr ""
+"Seus usuários podem administrar suas inscrições em locais convenientes."
 
 #: includes/admin/classes/class-bbp-admin.php:1087
 msgid "Converters"
@@ -210,7 +211,7 @@ msgstr ""
 
 #: includes/admin/classes/class-bbp-admin.php:1097
 msgid "Theme Compatibility"
-msgstr ""
+msgstr "Compatibilidade do tema"
 
 #: includes/admin/classes/class-bbp-admin.php:1098
 msgid "Better handling of styles and scripts in the template stack."
@@ -226,17 +227,17 @@ msgstr ""
 
 #: includes/admin/classes/class-bbp-admin.php:1107
 msgid "User capabilities"
-msgstr ""
+msgstr "Permissões do usuário"
 
 #: includes/admin/classes/class-bbp-admin.php:1108
 msgid ""
 "Roles and capabilities have been swept through, cleaned up, and simplified."
-msgstr ""
+msgstr "Regras e permissões são limpas e simplificadas."
 
 #: includes/admin/classes/class-bbp-admin.php:1114
 #: includes/admin/classes/class-bbp-admin.php:1254
 msgid "Go to Forum Settings"
-msgstr ""
+msgstr "Ir para Configurações do fórum"
 
 #: includes/admin/classes/class-bbp-admin.php:1144
 msgid "bbPress is created by a worldwide swarm of busy, busy bees."
@@ -244,7 +245,7 @@ msgstr ""
 
 #: includes/admin/classes/class-bbp-admin.php:1146
 msgid "Project Leaders"
-msgstr ""
+msgstr "Lideres de Porjeto"
 
 #: includes/admin/classes/class-bbp-admin.php:1150
 msgid "Founding Developer"
@@ -252,7 +253,7 @@ msgstr ""
 
 #: includes/admin/classes/class-bbp-admin.php:1154
 msgid "Lead Developer"
-msgstr ""
+msgstr "Lider de Desenvolvimento"
 
 #: includes/admin/classes/class-bbp-admin.php:1158
 msgid "Feature Virtuoso"
@@ -290,17 +291,17 @@ msgstr ""
 #: includes/admin/classes/class-bbp-admin.php:1275
 #: includes/admin/classes/class-bbp-admin.php:1298
 msgid "Update Forum"
-msgstr ""
+msgstr "Atualizar Fórum"
 
 #: includes/admin/classes/class-bbp-admin.php:1287
 #: includes/admin/classes/class-bbp-admin.php:1337
 msgid "All done!"
-msgstr ""
+msgstr "Tudo certo!"
 
 #: includes/admin/classes/class-bbp-admin.php:1288
 #: includes/admin/classes/class-bbp-admin.php:1338
 msgid "Go Back"
-msgstr ""
+msgstr "Voltar"
 
 #: includes/admin/classes/class-bbp-admin.php:1297
 msgid ""
@@ -321,7 +322,7 @@ msgstr ""
 
 #: includes/admin/classes/class-bbp-admin.php:1398
 msgid "Next Forums"
-msgstr ""
+msgstr "Próximo fórum"
 
 #: includes/admin/classes/class-bbp-admin.php:1416
 msgid ""
@@ -337,15 +338,15 @@ msgstr ""
 #: includes/admin/classes/class-bbp-converter.php:162
 #: includes/admin/settings.php:1794
 msgid "Start"
-msgstr ""
+msgstr "Começar"
 
 #: includes/admin/classes/class-bbp-converter.php:163
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: includes/admin/classes/class-bbp-converter.php:166
 msgid "Starting Import..."
-msgstr ""
+msgstr "Importando..."
 
 #: includes/admin/classes/class-bbp-converter.php:167
 msgid "Continuing Import..."
@@ -369,15 +370,15 @@ msgstr ""
 
 #: includes/admin/classes/class-bbp-converter.php:176
 msgid "Finished"
-msgstr ""
+msgstr "Acabou"
 
 #: includes/admin/classes/class-bbp-converter.php:177
 msgid "Stopped"
-msgstr ""
+msgstr "Parou"
 
 #: includes/admin/classes/class-bbp-converter.php:178
 msgid "Starting"
-msgstr ""
+msgstr "Começando"
 
 #: includes/admin/classes/class-bbp-converter.php:179
 msgid "Doing step %s..."
@@ -900,7 +901,7 @@ msgstr ""
 #: includes/admin/topics.php:480 includes/extend/buddypress/loader.php:260
 #: templates/default/bbpress/user-details.php:67
 msgid "Subscriptions"
-msgstr ""
+msgstr "Inscrições"
 
 #: includes/admin/forums.php:361
 msgid "The forum was not found."
@@ -929,18 +930,18 @@ msgstr ""
 
 #: includes/admin/forums.php:540 includes/admin/metaboxes.php:659
 msgid "Moderators"
-msgstr ""
+msgstr "Moderadores"
 
 #: includes/admin/forums.php:541
 #: templates/default/bbpress/content-single-topic-lead.php:19
 #: templates/default/bbpress/content-single-topic-lead.php:87
 msgid "Creator"
-msgstr ""
+msgstr "Criador"
 
 #: includes/admin/forums.php:542 includes/admin/replies.php:668
 #: includes/admin/topics.php:859
 msgid "Created"
-msgstr ""
+msgstr "Criado"
 
 #: includes/admin/forums.php:543 includes/admin/topics.php:860
 #: templates/default/bbpress/loop-forums.php:26
@@ -954,29 +955,29 @@ msgstr ""
 
 #: includes/admin/forums.php:595 includes/forums/template.php:581
 msgid "No Topics"
-msgstr ""
+msgstr "Sem tópicos"
 
 #: includes/admin/forums.php:631
 msgid "Close this forum"
-msgstr ""
+msgstr "Fechar este fórum"
 
 #: includes/admin/forums.php:633
 msgid "Open this forum"
-msgstr ""
+msgstr "Abrir este fórum"
 
 #: includes/admin/forums.php:710 includes/admin/forums.php:722
 #: includes/forums/template.php:79
 msgid "Forum updated."
-msgstr ""
+msgstr "Fórum atualizado."
 
 #: includes/admin/forums.php:712 includes/admin/forums.php:735
 msgid "View forum"
-msgstr ""
+msgstr "Ver fórum"
 
 #: includes/admin/forums.php:716 includes/admin/replies.php:977
 #: includes/admin/topics.php:1181
 msgid "Custom field updated."
-msgstr "Nenhum plugin está disponível para ser atualizado neste momento."
+msgstr ""
 
 #: includes/admin/forums.php:719 includes/admin/replies.php:980
 #: includes/admin/topics.php:1184
@@ -990,24 +991,24 @@ msgstr ""
 
 #: includes/admin/forums.php:733
 msgid "Forum created."
-msgstr ""
+msgstr "Fórum criado."
 
 #: includes/admin/forums.php:739
 msgid "Forum saved."
-msgstr ""
+msgstr "Fórum salvo."
 
 #: includes/admin/forums.php:744
 msgid "Forum submitted."
-msgstr ""
+msgstr "Fórum enviado."
 
 #: includes/admin/forums.php:746 includes/admin/forums.php:758
 #: includes/admin/forums.php:766
 msgid "Preview forum"
-msgstr ""
+msgstr "Visualizar Fórum"
 
 #: includes/admin/forums.php:753
 msgid "Forum scheduled for: %s."
-msgstr ""
+msgstr "Função no fórum: %s."
 
 #. translators: Publish box date format, see http:php.net/date
 #: includes/admin/forums.php:755 includes/admin/replies.php:1016
@@ -1017,13 +1018,13 @@ msgstr ""
 
 #: includes/admin/forums.php:764
 msgid "Forum draft updated."
-msgstr ""
+msgstr "Rascunho atualizado."
 
 #: includes/admin/metaboxes.php:43
 msgid "%s User"
 msgid_plural "%s Users"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s Usuário"
+msgstr[1] "%s Usuários"
 
 #: includes/admin/metaboxes.php:52
 msgid "%s Forum"
@@ -1034,8 +1035,8 @@ msgstr[1] ""
 #: includes/admin/metaboxes.php:61
 msgid "%s Topic"
 msgid_plural "%s Topics"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s Tópico"
+msgstr[1] "%s Tópicos"
 
 #: includes/admin/metaboxes.php:70
 msgid "%s Reply"
@@ -1051,13 +1052,13 @@ msgstr[1] ""
 
 #: includes/admin/metaboxes.php:105
 msgid "Discussion"
-msgstr ""
+msgstr "Discussão"
 
 #: includes/admin/metaboxes.php:147
 msgid "Reply"
 msgid_plural "Replies"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Resposta"
+msgstr[1] "Respostas"
 
 #: includes/admin/metaboxes.php:166 includes/admin/settings.php:368
 #: includes/topics/template.php:3380
@@ -1073,26 +1074,26 @@ msgstr ""
 #: includes/admin/metaboxes.php:198
 msgid "User"
 msgid_plural "Users"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Usuário"
+msgstr[1] "Usuários"
 
 #: includes/admin/metaboxes.php:217
 msgid "Hidden Topic"
 msgid_plural "Hidden Topics"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Esconder Tópico"
+msgstr[1] "Esconder Tópicos"
 
 #: includes/admin/metaboxes.php:239
 msgid "Hidden Reply"
 msgid_plural "Hidden Replies"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Esconder Resposta"
+msgstr[1] "Esconder Respostas"
 
 #: includes/admin/metaboxes.php:261
 msgid "Empty Topic Tag"
 msgid_plural "Empty Topic Tags"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tag vazia"
+msgstr[1] "Tags vazias"
 
 #: includes/admin/metaboxes.php:285
 msgid "You are using <span class=\"b\">bbPress %s</span>."
@@ -1101,7 +1102,7 @@ msgstr ""
 #: includes/admin/metaboxes.php:317 includes/admin/metaboxes.php:318
 #: includes/admin/metaboxes.php:404
 msgid "Type:"
-msgstr ""
+msgstr "Tipo:"
 
 #: includes/admin/metaboxes.php:329 includes/admin/metaboxes.php:330
 #: includes/admin/metaboxes.php:416 includes/admin/metaboxes.php:479
@@ -1112,15 +1113,15 @@ msgstr ""
 #: includes/admin/metaboxes.php:341 includes/admin/metaboxes.php:342
 #: templates/default/bbpress/form-forum.php:130
 msgid "Visibility:"
-msgstr ""
+msgstr "Visibilidade:"
 
 #: includes/admin/metaboxes.php:355
 msgid "Parent:"
-msgstr ""
+msgstr "Pai:"
 
 #: includes/admin/metaboxes.php:356
 msgid "Forum Parent"
-msgstr ""
+msgstr "Fórum pai"
 
 #: includes/admin/metaboxes.php:369 includes/admin/settings.php:1447
 #: templates/default/bbpress/form-forum.php:144
@@ -1129,15 +1130,15 @@ msgstr ""
 
 #: includes/admin/metaboxes.php:376
 msgid "Order:"
-msgstr ""
+msgstr "Ordem:"
 
 #: includes/admin/metaboxes.php:377
 msgid "Forum Order"
-msgstr ""
+msgstr "Ordem do fórum"
 
 #: includes/admin/metaboxes.php:405
 msgid "Topic Type"
-msgstr ""
+msgstr "Tipo do tópico"
 
 #: includes/admin/metaboxes.php:418
 msgid "Select whether to open or close the topic."
@@ -1166,7 +1167,7 @@ msgstr ""
 #: includes/admin/metaboxes.php:522
 #: templates/default/bbpress/loop-search-topic.php:25
 msgid "Topic:"
-msgstr ""
+msgstr "Tópico:"
 
 #: includes/admin/metaboxes.php:535
 #: templates/default/bbpress/form-reply.php:129
@@ -1222,27 +1223,27 @@ msgstr ""
 
 #: includes/admin/metaboxes.php:636
 msgid "IP Address"
-msgstr ""
+msgstr "Endereço IP"
 
 #: includes/admin/metaboxes.php:661
 msgid "Separate user-names with commas"
-msgstr ""
+msgstr "Separar nomes com virgulas"
 
 #: includes/admin/metaboxes.php:692
 msgid "No users have engaged to this topic."
-msgstr ""
+msgstr "Nenhum usuário tem compromisso com este tópico."
 
 #: includes/admin/metaboxes.php:725
 msgid "No users have favorited this topic."
-msgstr ""
+msgstr "Nenhum usuário favoritou este tópico."
 
 #: includes/admin/metaboxes.php:765
 msgid "No users have subscribed to this topic."
-msgstr ""
+msgstr "Nenhum usuário se inscreveu neste tópico."
 
 #: includes/admin/metaboxes.php:798
 msgid "No users have subscribed to this forum."
-msgstr ""
+msgstr "Nenhum usuário se inscreveu neste fórum."
 
 #: includes/admin/replies.php:117
 msgid ""
@@ -1482,11 +1483,11 @@ msgstr ""
 
 #: includes/admin/replies.php:664
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: includes/admin/replies.php:707
 msgid "No topic"
-msgstr ""
+msgstr "Sem tópicos"
 
 #: includes/admin/replies.php:728
 msgid "(Mismatch)"
@@ -1494,7 +1495,7 @@ msgstr ""
 
 #: includes/admin/replies.php:740 includes/admin/topics.php:899
 msgid "No forum"
-msgstr ""
+msgstr "Sem fórum"
 
 #: includes/admin/replies.php:796 includes/admin/topics.php:975
 #: includes/admin/topics.php:994
@@ -1519,7 +1520,7 @@ msgstr ""
 
 #: includes/admin/replies.php:820 includes/admin/topics.php:1025
 msgid "Not Spam"
-msgstr ""
+msgstr "Não é spam"
 
 #: includes/admin/replies.php:831 includes/admin/topics.php:1035
 #: includes/replies/template.php:1978 includes/topics/template.php:2532
@@ -1682,7 +1683,7 @@ msgstr "Favoritos"
 #: includes/extend/buddypress/loader.php:336
 #: templates/default/bbpress/user-details.php:49
 msgid "Engagements"
-msgstr ""
+msgstr "Compromissos"
 
 #: includes/admin/settings.php:222
 msgid "Topic tags"
@@ -1732,13 +1733,13 @@ msgstr ""
 #: includes/extend/buddypress/loader.php:319
 #: templates/default/bbpress/user-details.php:36
 msgid "Topics Started"
-msgstr ""
+msgstr "Tópicos criados"
 
 #: includes/admin/settings.php:429 includes/extend/buddypress/loader.php:222
 #: includes/extend/buddypress/loader.php:327
 #: templates/default/bbpress/user-details.php:42
 msgid "Replies Created"
-msgstr ""
+msgstr "Respostas criadas"
 
 #: includes/admin/settings.php:437 includes/extend/buddypress/loader.php:346
 msgid "Favorite Topics"
@@ -3600,7 +3601,7 @@ msgstr ""
 #: includes/users/signups.php:30
 #: templates/default/bbpress/form-user-roles.php:23
 msgid "Forum Role"
-msgstr ""
+msgstr "Função no fórum"
 
 #: includes/admin/users.php:107 includes/admin/users.php:111
 #: includes/users/template.php:1541
@@ -3836,13 +3837,13 @@ msgstr ""
 
 #: includes/common/template.php:2740
 msgid "Your Profile"
-msgstr ""
+msgstr "Seu perfil"
 
 #. translators: user's display name
 #: includes/common/template.php:2744
 #: templates/default/bbpress/user-details.php:30
 msgid "%s's Profile"
-msgstr ""
+msgstr "%s perfil"
 
 #: includes/common/template.php:2753
 msgid "Edit Your Profile"
@@ -3877,18 +3878,18 @@ msgstr ""
 #: templates/default/bbpress/form-user-login.php:20
 #: templates/default/bbpress/form-user-register.php:29
 msgid "Username"
-msgstr ""
+msgstr "Usuário"
 
 #: includes/common/widgets.php:89
 #: templates/default/bbpress/form-user-login.php:25
 #: templates/default/bbpress/form-user-passwords.php:17
 msgid "Password"
-msgstr ""
+msgstr "Senha"
 
 #: includes/common/widgets.php:95
 #: templates/default/bbpress/form-user-login.php:31
 msgid "Keep me signed in"
-msgstr ""
+msgstr "Lembrar"
 
 #: includes/common/widgets.php:114
 #: templates/default/bbpress/form-user-register.php:42
@@ -4199,7 +4200,7 @@ msgstr ""
 #: includes/extend/buddypress/loader.php:356
 #: templates/default/bbpress/user-subscriptions.php:38
 msgid "Subscribed Topics"
-msgstr ""
+msgstr "Tópicos Inscritos"
 
 #: includes/extend/buddypress/notifications.php:89
 msgid "You have %d new replies"
@@ -5472,7 +5473,7 @@ msgstr ""
 
 #: templates/default/bbpress/feedback-no-forums.php:17
 msgid "Oh, bother! No forums were found here."
-msgstr ""
+msgstr "Nenhum fórum aqui."
 
 #: templates/default/bbpress/feedback-no-replies.php:17
 msgid "Oh, bother! No replies were found here."
@@ -5484,7 +5485,7 @@ msgstr ""
 
 #: templates/default/bbpress/feedback-no-topics.php:17
 msgid "Oh, bother! No topics were found here."
-msgstr ""
+msgstr "Nenhum tópico aqui."
 
 #: templates/default/bbpress/form-anonymous.php:18
 msgid "Your information:"
@@ -5870,60 +5871,60 @@ msgstr ""
 
 #: templates/default/bbpress/form-topic.php:249
 msgid "You must be logged in to create new topics."
-msgstr ""
+msgstr "Você precisa estar autenticado para criar tópicos"
 
 #: templates/default/bbpress/form-user-edit.php:27
 msgid "First Name"
-msgstr ""
+msgstr "Primeiro nome"
 
 #: templates/default/bbpress/form-user-edit.php:32
 msgid "Last Name"
-msgstr ""
+msgstr "Último nome"
 
 #: templates/default/bbpress/form-user-edit.php:37
 msgid "Nickname"
-msgstr ""
+msgstr "Apelido"
 
 #: templates/default/bbpress/form-user-edit.php:42
 msgid "Display Name"
-msgstr ""
+msgstr "Nome exibido"
 
 #: templates/default/bbpress/form-user-edit.php:52
 #: templates/default/bbpress/form-user-edit.php:55
 msgid "Contact Info"
-msgstr ""
+msgstr "Informações de Contato"
 
 #: templates/default/bbpress/form-user-edit.php:78
 #: templates/default/bbpress/form-user-edit.php:84
 msgid "About Yourself"
-msgstr ""
+msgstr "Sobre você"
 
 #: templates/default/bbpress/form-user-edit.php:79
 #: templates/default/bbpress/form-user-edit.php:85
 msgid "About the user"
-msgstr ""
+msgstr "Sobre o usuário"
 
 #: templates/default/bbpress/form-user-edit.php:91
 msgid "Biographical Info"
-msgstr ""
+msgstr "Bio"
 
 #: templates/default/bbpress/form-user-edit.php:99
 #: templates/default/bbpress/form-user-edit.php:102
 msgid "Account"
-msgstr ""
+msgstr "Conta"
 
 #: templates/default/bbpress/form-user-edit.php:119
 msgid "Language"
-msgstr ""
+msgstr "Linguagem"
 
 #: templates/default/bbpress/form-user-edit.php:131
 #: templates/default/bbpress/form-user-edit.php:134
 msgid "User Role"
-msgstr ""
+msgstr "Função"
 
 #: templates/default/bbpress/form-user-edit.php:141
 msgid "Network Role"
-msgstr ""
+msgstr "Network"
 
 #: templates/default/bbpress/form-user-edit.php:144
 msgid "Grant this user super admin privileges for the Network."
@@ -5931,51 +5932,51 @@ msgstr ""
 
 #: templates/default/bbpress/form-user-edit.php:167
 msgid "Update Profile"
-msgstr ""
+msgstr "Atualizar Perfil"
 
 #: templates/default/bbpress/form-user-edit.php:168
 msgid "Update User"
-msgstr ""
+msgstr "Atualizar Usuário"
 
 #: templates/default/bbpress/form-user-lost-pass.php:21
 msgid "Username or Email"
-msgstr ""
+msgstr "Usuário ou Email"
 
 #: templates/default/bbpress/form-user-lost-pass.php:30
 msgid "Reset My Password"
-msgstr ""
+msgstr "Restaurar Senha"
 
 #: templates/default/bbpress/form-user-passwords.php:18
 msgid "Generate Password"
-msgstr ""
+msgstr "Gerar Senha"
 
 #: templates/default/bbpress/form-user-passwords.php:26
 msgid "Hide password"
-msgstr ""
+msgstr "Esconder senha"
 
 #: templates/default/bbpress/form-user-passwords.php:28
 msgid "Hide"
-msgstr ""
+msgstr "Esconder"
 
 #: templates/default/bbpress/form-user-passwords.php:29
 msgid "Cancel password change"
-msgstr ""
+msgstr "Cancelar mudança de senha"
 
 #: templates/default/bbpress/form-user-passwords.php:40
 msgid "Repeat New Password"
-msgstr ""
+msgstr "Repetir nova senha"
 
 #: templates/default/bbpress/form-user-passwords.php:42
 msgid "Type your new password again."
-msgstr ""
+msgstr "Escreva sua senha novamente."
 
 #: templates/default/bbpress/form-user-passwords.php:46
 msgid "Confirm"
-msgstr ""
+msgstr "Confirme"
 
 #: templates/default/bbpress/form-user-register.php:17
 msgid "Create an Account"
-msgstr ""
+msgstr "Criar uma conta"
 
 #: templates/default/bbpress/form-user-register.php:23
 msgid "Your username must be unique, and cannot be changed later."
@@ -6027,7 +6028,7 @@ msgstr ""
 #: templates/default/bbpress/user-details.php:30
 #: templates/default/bbpress/user-profile.php:18
 msgid "Profile"
-msgstr ""
+msgstr "Perfil"
 
 #: templates/default/bbpress/user-details.php:36
 msgid "%s's Topics Started"
@@ -6043,15 +6044,15 @@ msgstr ""
 
 #: templates/default/bbpress/user-engagements.php:19
 msgid "Topics Engaged In"
-msgstr ""
+msgstr "Tópicos envolvidos"
 
 #: templates/default/bbpress/user-favorites.php:19
 msgid "Favorite Forum Topics"
-msgstr ""
+msgstr "Tópicos Favoritos"
 
 #: templates/default/bbpress/user-profile.php:19
 msgid "Registered: %s"
-msgstr ""
+msgstr "Registrado: %s"
 
 #: templates/default/bbpress/user-profile.php:29
 msgid "Website: %s"
@@ -6063,23 +6064,23 @@ msgstr ""
 
 #: templates/default/bbpress/user-profile.php:42
 msgid "Topics Started: %s"
-msgstr ""
+msgstr "Tópicos criados: %s"
 
 #: templates/default/bbpress/user-profile.php:43
 msgid "Replies Created: %s"
-msgstr ""
+msgstr "Respostas criadas: %s"
 
 #: templates/default/bbpress/user-profile.php:44
 msgid "Forum Role: %s"
-msgstr ""
+msgstr "Função no fórum: %s"
 
 #: templates/default/bbpress/user-replies-created.php:19
 msgid "Forum Replies Created"
-msgstr ""
+msgstr "Respostas no fórum"
 
 #: templates/default/bbpress/user-subscriptions.php:23
 msgid "Subscribed Forums"
-msgstr ""
+msgstr "Fórum Inscrito"
 
 #: templates/default/bbpress/user-topics-created.php:19
 msgid "Forum Topics Started"
