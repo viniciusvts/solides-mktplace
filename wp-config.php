@@ -25,13 +25,20 @@ switch ($server_addr) {
         $dbname = 'solides_mktplace';
         $dbuser_default = 'root';
         $dbpassword_default = 'root';
-        $dev_mod = 'true';
+        $dev_mod = false;
         $wp_home = 'http://solides_mktplace.localhost/';
         $wp_siteurl = 'http://solides_mktplace.localhost/';
 		break;
 	case '198.199.88.130': //digitalocean
         break;
     default:
+        $dbhost_default = 'localhost';
+        $dbname = 'dnafor70_solides_mktplace';
+        $dbuser_default = 'dnafor70_solides';
+        $dbpassword_default = 'm+[^ZEA~@XLh';
+        $dev_mod = false;
+        $wp_home = 'https://www.dnaformarketing.com.br/solides_mktplace/';
+        $wp_siteurl = 'https://www.dnaformarketing.com.br/solides_mktplace/';
         break;
 }
 define ('WPLANG', 'pt_BR');
