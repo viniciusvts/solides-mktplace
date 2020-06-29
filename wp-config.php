@@ -37,8 +37,8 @@ switch ($server_addr) {
         $dbuser_default = 'dnafor70_solides';
         $dbpassword_default = 'm+[^ZEA~@XLh';
         $dev_mod = false;
-        $wp_home = 'https://www.dnaformarketing.com.br/solides_mktplace';
-        $wp_siteurl = 'https://www.dnaformarketing.com.br/solides_mktplace';
+        $wp_home = 'https://www.dnaformarketing.com.br/solides_mktplace/';
+        $wp_siteurl = 'https://www.dnaformarketing.com.br/solides_mktplace/';
         break;
 }
 define ('WPLANG', 'pt_BR');
