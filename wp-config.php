@@ -37,13 +37,14 @@ switch ($server_addr) {
         $dbuser_default = 'dnafor70_solides';
         $dbpassword_default = 'm+[^ZEA~@XLh';
         $dev_mod = false;
-        $wp_home = 'https://www.dnaformarketing.com.br/solides_mktplace/';
-        $wp_siteurl = 'https://www.dnaformarketing.com.br/solides_mktplace/';
+        $wp_home = 'http://solides-mktplace.dnaformarketing.com.br/';
+        $wp_siteurl = 'http://solides-mktplace.dnaformarketing.com.br/';
         break;
 }
 define ('WPLANG', 'pt_BR');
 define('WP_HOME',$wp_home);
 define('WP_SITEURL',$wp_siteurl);
+define('EDD_DISABLE_REWRITE', true);
 
 // ** Configurações do MySQL - Você pode pegar estas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
