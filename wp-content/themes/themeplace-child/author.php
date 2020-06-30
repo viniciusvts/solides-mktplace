@@ -36,7 +36,7 @@ if( isset($_GET['author-profile']) && $_GET['author-profile']=='true' ) { ?>
                                 <?php echo do_shortcode( '[fes_vendor_contact_form id="'.$queriedObject->ID.'"]' ) ?>
                                 </div>
                             <?php } ?>
-                            
+                            <h2 class="widget-title">Certificados:</h2>
                             <ul class="list-inline author-product">
                             <?php
                             $certs = get_field('certificados', 'user_'.$queriedObject->ID);
@@ -44,7 +44,7 @@ if( isset($_GET['author-profile']) && $_GET['author-profile']=='true' ) { ?>
                                 foreach ($certs as $cert) {
                                     $certImage = get_field('imagem', $cert['certificado']->ID);
                                 ?>
-                                    <li class="list-inline-item">
+                                    <li class="list-inline-item scale-on-hover">
                                         <img src="<?php echo $certImage['sizes']['medium'] ?>" alt="<?php echo $certImage{'alt'} ?>">
                                     </li>
                                 <?php
@@ -55,7 +55,15 @@ if( isset($_GET['author-profile']) && $_GET['author-profile']=='true' ) { ?>
                         </div>
                     </div>
                 </div>
-                
+                <style>
+                .scale-on-hover:hover{
+                    transform: scale(1.1);
+                    transition: all .5s;
+                }
+                .scale-on-hover{
+                    transition: all .5s;
+                }
+                </style>
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-<?php if ( true == $vendor_earnings ){echo '4';}else{echo '6';} ?>">
