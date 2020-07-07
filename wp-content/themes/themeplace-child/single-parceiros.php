@@ -39,7 +39,7 @@ $link = $acfFields['link'];
                                             ); ?>">
                                 <?php echo $queriedObject->post_title; ?>
                             </a>
-                            <h6><?php echo 'Parceiro desde:'.date_format(
+                            <h6><?php echo 'Parceiro desde: '.date_format(
                                                 date_create($queriedObject->post_date),"d M Y"
                                             ); ?></h6>
                             <h2 class="widget-title d-lg-none">Certificados:</h2>
