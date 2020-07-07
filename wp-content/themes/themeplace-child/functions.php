@@ -12,4 +12,4 @@ add_action( 'wp_enqueue_scripts', 'themeplace_enqueue_styles' );
 function themeplace_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css',array('bootstrap') ); 
 }
-require 'custom_posts/certificados.php';
+include_once 'custom_posts/parceiros.php';
