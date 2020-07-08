@@ -44,19 +44,24 @@ $link = $acfFields['link'];
                                             ); ?></h6>
                             <h2 class="widget-title d-lg-none">Certificados:</h2>
                             <ul class="list-inline author-product d-lg-none" style="border:0;">
-                            <?php
-                            if($certs){
+                                <?php
                                 foreach ($certs as $cert) {
-                                    $certImage = get_field('imagem', $cert['certificado']->ID);
+                                    $certFields = get_fields($cert['certificado']->ID);
+                                    $certImage = $certFields['imagem'];
+                                    $certNome = $cert['certificado']->post_title;
+                                    $certEmissao = $cert['data_emissao'];
                                 ?>
-                                    <li class="list-inline-item scale-on-hover">
-                                        <img src="<?php echo $certImage['sizes']['medium'] ?>"
+                                    <li class="list-inline-item scale-on-hover col-6 col-lg-3 p-3"
+                                    style="margin-bottom: 1rem !important;">
+                                        <img src="<?php echo $certImage['sizes']['thumbnail'] ?>"
                                         alt="<?php echo $certImage{'alt'} ?>">
+                                        <b><?php echo $certNome ?></b>
+                                        Emitido em:
+                                        <?php echo $certEmissao ?>
                                     </li>
                                 <?php
                                 }
-                            }
-                            ?>
+                                ?>
                             </ul>
                         </div>
                     </div>
@@ -118,16 +123,21 @@ $link = $acfFields['link'];
                                 <h3>Certificados:</h3>
                                 <ul class="list-inline author-product">
                                 <?php
-                                if($certs){
-                                    foreach ($certs as $cert) {
-                                        $certImage = get_field('imagem', $cert['certificado']->ID);
-                                    ?>
-                                        <li class="list-inline-item scale-on-hover">
-                                            <img src="<?php echo $certImage['sizes']['medium'] ?>"
-                                            alt="<?php echo $certImage{'alt'} ?>">
-                                        </li>
-                                    <?php
-                                    }
+                                foreach ($certs as $cert) {
+                                    $certFields = get_fields($cert['certificado']->ID);
+                                    $certImage = $certFields['imagem'];
+                                    $certNome = $cert['certificado']->post_title;
+                                    $certEmissao = $cert['data_emissao'];
+                                ?>
+                                    <li class="list-inline-item scale-on-hover col-6 col-lg-3 p-3"
+                                    style="margin-bottom: 1rem !important;">
+                                        <img src="<?php echo $certImage['sizes']['thumbnail'] ?>"
+                                        alt="<?php echo $certImage{'alt'} ?>">
+                                        <b><?php echo $certNome ?></b>
+                                        Emitido em:
+                                        <?php echo $certEmissao ?>
+                                    </li>
+                                <?php
                                 }
                                 ?>
                                 </ul>
