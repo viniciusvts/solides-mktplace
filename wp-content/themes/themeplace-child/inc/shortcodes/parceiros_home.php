@@ -19,26 +19,17 @@ $args = array(
 );
 $query = new WP_Query($args);
 $parceiros = $query->posts;
-
-// recupera dados dos certificados
-$args = array(
-    'post_type' => 'certificados',
-);
-$query = new WP_Query($args);
-$certificados = $query->posts;
+$acf = '';
 ?>
 <div class="container">
     <div class="download-filter">
         <ul class="list-inline">
-            <li class="select-cat list-inline-item" data-filter="*">All Items</li>
-            <?php
-            foreach ($certificados as $cert) {
-            ?>
-            <li class="list-inline-item"
-            data-filter=".<?php echo $cert->post_name ?>"><?php echo $cert->post_title ?></li>
-            <?php
-            }
-            ?>
+            <li class="select-cat list-inline-item" data-filter="*">Todos</li>
+            <li class="list-inline-item" data-filter=".val5">Diamond</li>
+            <li class="list-inline-item" data-filter=".val4">Platinum</li>
+            <li class="list-inline-item" data-filter=".val3">Gold</li>
+            <li class="list-inline-item" data-filter=".val2">Silver</li>
+            <li class="list-inline-item" data-filter=".val1">Bronze</li>
         </ul>
     </div>
     <div class="download_items row" style="position: relative; height: 3234.75px;">
@@ -49,15 +40,8 @@ $certificados = $query->posts;
             $img = $acfFields['foto'];
             $certs = $acfFields['certificados'];
             $nivelParc = $acfFields['nivel_parceiro'];
-            $certsSlugS = '';
-            if($certs){
-                foreach ($certs as $cert) {
-                    $certsSlugS .= $cert['certificado']->post_name;
-                    $certsSlugS .= ' ';
-                }
-            }
         ?>
-        <div class="col-md-4 col-sm-4 col-xs-6 <?php echo $certsSlugS ?>"
+        <div class="col-md-3 col-sm-4 col-xs-6 <?php echo $nivelParc['value'] ?>"
         style="position: absolute; left: 0px; top: 0px;">
             <div class="download-item">
                 <div class="download-item-image">
