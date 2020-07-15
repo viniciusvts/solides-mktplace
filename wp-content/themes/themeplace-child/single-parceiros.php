@@ -12,11 +12,16 @@ global $themeplace_opt;
 
 $queriedObject = get_queried_object();
 $acfFields = get_fields($queriedObject->ID);
+$categories = get_terms('categoria_parceiros', $queriedObject->ID);
 $img = $acfFields['foto'];
 $certs = $acfFields['certificados'];
 $nivelParc = $acfFields['nivel_parceiro'];
 $sobre = $acfFields['sobre'];
 $link = $acfFields['link'];
+$endereco = $acfFields['endereco'];
+$email = $acfFields['email'];
+$site = $acfFields['site'];
+$mapa = $acfFields['mapa'];
 ?>
     <section class="themeplace-page-section">
         <div class="container">
@@ -25,56 +30,63 @@ $link = $acfFields['link'];
                     <div class="author-profile-sidebar">
                         <div class="author-info">
                             <div class="author-pic">
-                            <img width="200" height="200" 
-                            src="<?php echo $img['sizes']['medium'] ?>" 
-                            class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 alignnone photo"
-                            alt="<?php echo $img['alt'] ?>">
+                                <img width="200" height="200" 
+                                src="<?php echo $img['sizes']['medium'] ?>" 
+                                class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 alignnone photo"
+                                alt="<?php echo $img['alt'] ?>">
                             </div>
-                            <a href="<?php echo esc_url(
-                                                add_query_arg(
-                                                    'author-profile',
-                                                    'true',
-                                                    get_author_posts_url($queriedObject->ID)
-                                                )
-                                            ); ?>">
-                                <?php echo $queriedObject->post_title; ?>
-                            </a>
-                            <h6><?php echo 'Parceiro desde: '.date_format(
+                            <h3><?php echo $queriedObject->post_title; ?></h3>
+                            <h6 class="mb-2"><?php echo $endereco ?></h6>
+                            <a class="mt-0" href="<?php echo $site ?>"><h6 class="mb-2"><?php echo $site ?></h6></a>
+                            <a class="mt-0 mb-3" href="mailto:<?php echo $email ?>"><h6 class="mb-2"><?php echo $email ?></h6></a>
+                            <br/>
+                            <h7><?php echo 'Parceiro desde: '.date_format(
                                                 date_create($queriedObject->post_date),"d M Y"
-                                            ); ?></h6>
-                            <h2 class="widget-title d-lg-none">Certificados:</h2>
-                            <ul class="list-inline author-product d-lg-none" style="border:0;">
-                                <?php
-                                foreach ($certs as $cert) {
-                                    $certFields = get_fields($cert['certificado']->ID);
-                                    $certImage = $certFields['imagem'];
-                                    $certNome = $cert['certificado']->post_title;
-                                    $certEmissao = $cert['data_emissao'];
-                                ?>
-                                    <li class="list-inline-item scale-on-hover col-6 col-lg-3 p-3"
-                                    style="margin-bottom: 1rem !important;">
-                                        <img src="<?php echo $certImage['sizes']['thumbnail'] ?>"
-                                        alt="<?php echo $certImage{'alt'} ?>">
-                                        <b><?php echo $certNome ?></b>
-                                        Emitido em:
-                                        <?php echo $certEmissao ?>
-                                    </li>
-                                <?php
-                                }
-                                ?>
-                            </ul>
+                                            ); ?></h7>
                         </div>
                     </div>
+                    <div class="author-info-box d-lg-none">
+                        <h2 class="widget-title d-lg-none">Certificados:</h2>
+                        <ul class="list-inline author-product d-lg-none" style="border:0;">
+                            <?php
+                            foreach ($certs as $cert) {
+                                $certFields = get_fields($cert['certificado']->ID);
+                                $certImage = $certFields['imagem'];
+                                $certNome = $cert['certificado']->post_title;
+                                $certEmissao = $cert['data_emissao'];
+                            ?>
+                                <li class="list-inline-item scale-on-hover col-6 col-lg-3 p-3"
+                                style="margin-bottom: 1rem !important;">
+                                    <img src="<?php echo $certImage['sizes']['thumbnail'] ?>"
+                                    alt="<?php echo $certImage{'alt'} ?>">
+                                    <b><?php echo $certNome ?></b>
+                                    Emitido em:
+                                    <?php echo $certEmissao ?>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                    <?php if($categories){ ?>
+                    <div class="author-info-box my-4">
+                        <h2 class="widget-title ">Categorias:</h2>
+                        <ul class="list-inline" style="border:0;">
+                            <?php
+                            foreach ($categories as $cat) {
+                                /**adicionar ao final o slug da categoria */
+                                $url = 'http://solides_mktplace.localhost/?s=&post_type=parceiros&categoria_parceiros=';
+                            ?>
+                                <li class="mb-2">
+                                    <a href="<?php echo $url.$cat->slug ?>"><?php echo $cat->name ?></a>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                    <?php } ?>
                 </div>
-                <style>
-                .scale-on-hover:hover{
-                    transform: scale(1.1);
-                    transition: all .5s;
-                }
-                .scale-on-hover{
-                    transition: all .5s;
-                }
-                </style>
                 <div class="col-md-8">
                     <div class="row">
                         <?php
@@ -145,11 +157,40 @@ $link = $acfFields['link'];
                         </div>
                         <?php
                         }
+                        if ($mapa){
+                        ?>
+                        <div class="col-md-12">
+                            <div class="author-info-box d-none d-lg-block">
+                                <h3>Mapa:</h3>
+                                <div class="author-product mapa-parceiro"><?php echo $mapa ?></div>
+                            </div>
+                        </div>
+                        <?php
+                        }
                         ?>
                     </div>                    
                 </div>
             </div>
         </div>
     </section>
-
+    <style>
+    .scale-on-hover:hover{
+        transform: scale(1.1);
+        transition: all .5s;
+    }
+    .scale-on-hover{
+        transition: all .5s;
+    }
+    .mapa-parceiro iframe{
+        width: 100%!important;
+    }
+    .author-profile-sidebar .author-info h3 {
+        font-size: 22px;
+        margin-top: 15px;
+        font-weight: 600;
+        display: inline-block;
+        color: #2e3d62;
+        margin-bottom: 10px;
+    }
+    </style>
 <?php get_footer(); ?>
