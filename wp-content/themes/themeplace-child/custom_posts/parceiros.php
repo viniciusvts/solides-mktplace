@@ -51,3 +51,47 @@ function custom_parceiros() {
 	register_post_type( 'parceiros', $args );
 }
 add_action( 'init', 'custom_parceiros', 0 );
+
+// Register Custom Post Type Categoria
+function tax_parceiros() {
+	$labels = array(
+		'name'                       => _x( 'Categorias do parceiro', 'Taxonomy General Name', 'dna' ),
+		'singular_name'              => _x( 'Categoria do parceiro', 'Taxonomy Singular Name', 'dna' ),
+		'menu_name'                  => __( 'Categorias', 'dna' ),
+		'all_items'                  => __( 'Todas as categorias', 'dna' ),
+		'parent_item'                => __( 'Categoria mãe', 'dna' ),
+		'parent_item_colon'          => __( 'Categoria mãe:', 'dna' ),
+		'new_item_name'              => __( 'Nova Categoria do parceiro', 'dna' ),
+		'add_new_item'               => __( 'Adicionar Categoria do parceiro', 'dna' ),
+		'edit_item'                  => __( 'Editar Categoria do parceiro', 'dna' ),
+		'update_item'                => __( 'Atualizar Categoria do parceiro', 'dna' ),
+		'view_item'                  => __( 'Ver Categoria do parceiro', 'dna' ),
+		'separate_items_with_commas' => __( 'Separar categorias por vírgula', 'dna' ),
+		'add_or_remove_items'        => __( 'Adicionar ou remover Categoria do parceiro', 'dna' ),
+		'choose_from_most_used'      => __( 'Mostrar categorias mais usadas', 'dna' ),
+		'popular_items'              => __( 'Categorias populares', 'dna' ),
+		'search_items'               => __( 'Buscar Categoria do parceiro', 'dna' ),
+		'not_found'                  => __( 'Nada encontrado', 'dna' ),
+		'no_terms'                   => __( 'Nenhuma Categoria do parceiro', 'dna' ),
+		'items_list'                 => __( 'Lista de categorias', 'dna' ),
+		'items_list_navigation'      => __( 'Navegar por Categoria do parceiro', 'dna' ),
+	);
+	$rewrite = array(
+		'slug'                       => 'categoria_parceiros',
+		'with_front'                 => false,
+		'hierarchical'               => true,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		"show_in_rest"				 => true,
+		'rewrite'                    => $rewrite,
+	);
+	register_taxonomy( 'categoria_parceiros', array( 'parceiros' ), $args );
+}
+add_action( 'init', 'tax_parceiros', 0 );
