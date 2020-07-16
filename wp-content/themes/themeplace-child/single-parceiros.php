@@ -182,6 +182,49 @@ $mapa = $acfFields['mapa'];
             </div>
         </div>
     </section>
+    <!-- Modal de envio do form -->
+    <div class="modal fade" id="DNAmodal" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModal">Entre em contato com <?php echo $queriedObject->post_title; ?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/parceiros/parceiro-q4/" method="post" id="contatoParceiro">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" aria-describedby="ajudaEmail" placeholder="Email">
+                            <small id="ajudaEmail" class="form-text text-muted">Insira um email corporativo</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website</label>
+                            <input type="text" class="form-control" name="website" placeholder="Website">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" class="form-control" name="telefone" placeholder="Telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-control" name="mensagem" placeholder="Mensagem"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="document.getElementById('contatoParceiro').submit()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <style>
     .scale-on-hover:hover{
         transform: scale(1.1);
@@ -200,6 +243,9 @@ $mapa = $acfFields['mapa'];
         display: inline-block;
         color: #2e3d62;
         margin-bottom: 10px;
+    }
+    .modal-footer{
+        border-top:0;
     }
     </style>
 <?php get_footer(); ?>
