@@ -1,0 +1,17 @@
+.novoitem, .ctsoptions{
+	margin: 50px 0;
+}
+.novoitem form{
+	display: grid;
+    width: 50%;
+    margin: 10px auto;
+}
+form.option{
+	padding: 10px 0;
+}
+.paginate{
+	display: flex;
+}
+.paginate .col{
+	margin: 20px auto;
+}
