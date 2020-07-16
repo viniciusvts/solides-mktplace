@@ -36,15 +36,24 @@ $mapa = $acfFields['mapa'];
                                 alt="<?php echo $img['alt'] ?>">
                             </div>
                             <h3><?php echo $queriedObject->post_title; ?></h3>
+                            <?php if ($endereco){ ?>
                             <h6 class="mb-2"><?php echo $endereco ?></h6>
-                            <a class="mt-0" href="<?php echo $site ?>"><h6 class="mb-2"><?php echo $site ?></h6></a>
-                            <a class="mt-0 mb-3" href="mailto:<?php echo $email ?>"><h6 class="mb-2"><?php echo $email ?></h6></a>
+                            <?php } if ($site){ ?>
+                            <a class="mt-0" href="<?php echo $site ?>">
+                                <h6 class="mb-2"><?php echo $site ?></h6>
+                            </a>
+                            <?php } if ($email){ ?>
+                            <a class="mt-0 mb-3" href="mailto:<?php echo $email ?>">
+                                <h6 class="mb-2"><?php echo $email ?></h6>
+                            </a>
+                            <?php } ?>
                             <br/>
                             <h7><?php echo 'Parceiro desde: '.date_format(
                                                 date_create($queriedObject->post_date),"d M Y"
                                             ); ?></h7>
                         </div>
                     </div>
+                    <?php if ($certs){ ?>
                     <div class="author-info-box d-lg-none">
                         <h2 class="widget-title d-lg-none">Certificados:</h2>
                         <ul class="list-inline author-product d-lg-none" style="border:0;">
@@ -68,7 +77,7 @@ $mapa = $acfFields['mapa'];
                             ?>
                         </ul>
                     </div>
-                    <?php if($categories){ ?>
+                    <?php } if($categories){ ?>
                     <div class="author-info-box my-4">
                         <h2 class="widget-title ">Categorias:</h2>
                         <ul class="list-inline" style="border:0;">
@@ -92,7 +101,7 @@ $mapa = $acfFields['mapa'];
                         <?php
                         if ($nivelParc) {
                         ?>
-                        <div class="col-md-6">
+                        <div class="col-md-<?php if ($email) { echo('6'); } else { echo('12'); } ?>">
                             <div class="author-info-box">
                                 <p>Nível do parceiro:</p>
                                 <h3>
@@ -101,13 +110,13 @@ $mapa = $acfFields['mapa'];
                         </div>
                         <?php
                         }
-                        if ($link) {
+                        if ($email) {
                         ?>
-                        <div class="col-md-6">
+                        <div class="col-md-<?php if ($nivelParc) { echo('6'); } else { echo('12'); } ?>">
                             <div class="author-info-box">
                                 <div class="menu-item menu-login-url mt-4" style="display:block!important;">
-                                    <a class="p-2 px-4"
-                                    href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
+                                    <a class="p-2 px-4" href="#contato"
+                                    data-toggle="modal" data-target="#DNAmodal">Contato</a>
                                 </div>
                             </div>
                         </div>
