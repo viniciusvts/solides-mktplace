@@ -193,27 +193,30 @@ $mapa = $acfFields['mapa'];
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="/parceiros/parceiro-q4/" method="post" id="contatoParceiro">
+                    <form action="/wp-json/dna_ccp/v1/parceiro" method="post" id="contatoParceiro">
+                        <input type="hidden" name="parceiro" value="<?php echo($queriedObject->post_title); ?>">
+                        <input type="hidden" name="emailparceiro" value="<?php echo($email); ?>">
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" class="form-control" name="nome" placeholder="Nome">
+                            <input type="text" class="form-control" name="nome" placeholder="Nome" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" name="email" aria-describedby="ajudaEmail" placeholder="Email">
+                            <input type="email" class="form-control" name="email"
+                            aria-describedby="ajudaEmail" placeholder="Email" required>
                             <small id="ajudaEmail" class="form-text text-muted">Insira um email corporativo</small>
                         </div>
                         <div class="form-group">
                             <label for="website">Website</label>
-                            <input type="text" class="form-control" name="website" placeholder="Website">
+                            <input type="url" class="form-control" name="website" placeholder="Website" required>
                         </div>
                         <div class="form-group">
                             <label for="telefone">Telefone</label>
-                            <input type="tel" class="form-control" name="telefone" placeholder="Telefone">
+                            <input type="tel" class="form-control" name="telefone" placeholder="Telefone" required>
                         </div>
                         <div class="form-group">
                             <label for="mensagem">Mensagem</label>
-                            <textarea class="form-control" name="mensagem" placeholder="Mensagem"></textarea>
+                            <textarea class="form-control" name="mensagem" placeholder="Mensagem" required></textarea>
                         </div>
                     </form>
                 </div>
