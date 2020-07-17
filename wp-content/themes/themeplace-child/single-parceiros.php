@@ -170,7 +170,7 @@ $mapa = $acfFields['mapa'];
                         ?>
                         <div class="col-md-12">
                             <div class="author-info-box d-none d-lg-block">
-                                <h3>Mapa:</h3>
+                                <h3>Região do parceiro:</h3>
                                 <div class="author-product mapa-parceiro"><?php echo $mapa ?></div>
                             </div>
                         </div>
