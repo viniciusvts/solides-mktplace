@@ -14,4 +14,5 @@ function themeplace_enqueue_styles() {
 }
 include_once 'custom_posts/certificados.php';
 include_once 'custom_posts/parceiros.php';
+include_once 'inc/customizer.php';
 include_once 'inc/shortcode.php';

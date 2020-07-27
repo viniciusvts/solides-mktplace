@@ -55,7 +55,7 @@ $mapa = $acfFields['mapa'];
                     </div>
                     <?php if ($certs){ ?>
                     <div class="author-info-box d-lg-none">
-                        <h2 class="widget-title d-lg-none">Certificados:</h2>
+                        <h2 class="widget-title d-lg-none"><?php echo get_theme_mod( 'dnaTheme_setting_rotuloCertificados') ?></h2>
                         <ul class="list-inline author-product d-lg-none" style="border:0;">
                             <?php
                             foreach ($certs as $cert) {
@@ -79,7 +79,7 @@ $mapa = $acfFields['mapa'];
                     </div>
                     <?php } if($categories){ ?>
                     <div class="author-info-box my-4">
-                        <h2 class="widget-title ">Categorias:</h2>
+                        <h2 class="widget-title "><?php echo get_theme_mod( 'dnaTheme_setting_rotuloCategorias') ?></h2>
                         <ul class="list-inline" style="border:0;">
                             <?php
                             foreach ($categories as $cat) {
@@ -103,7 +103,7 @@ $mapa = $acfFields['mapa'];
                         ?>
                         <div class="col-md-<?php if ($email) { echo('6'); } else { echo('12'); } ?>">
                             <div class="author-info-box">
-                                <p>Nível do parceiro:</p>
+                                <p><?php echo get_theme_mod( 'dnaTheme_setting_rotuloNivelParceiro') ?></p>
                                 <h3>
                                 <?php echo $nivelParc['label'] ?></h3>
                             </div>
@@ -131,7 +131,7 @@ $mapa = $acfFields['mapa'];
                         ?>
                         <div class="col-md-12">
                             <div class="author-info-box px-5">
-                                <h3 class="mb-4">Sobre:</h3>
+                                <h3 class="mb-4"><?php echo get_theme_mod( 'dnaTheme_setting_rotuloSobre') ?></h3>
                                 <?php echo $sobre; ?>
                             </div>
                         </div>
@@ -141,7 +141,7 @@ $mapa = $acfFields['mapa'];
                         ?>
                         <div class="col-md-12">
                             <div class="author-info-box d-none d-lg-block">
-                                <h3>Certificados:</h3>
+                                <h3><?php echo get_theme_mod( 'dnaTheme_setting_rotuloCertificados') ?></h3>
                                 <ul class="list-inline author-product">
                                 <?php
                                 foreach ($certs as $cert) {
@@ -169,8 +169,8 @@ $mapa = $acfFields['mapa'];
                         if ($mapa){
                         ?>
                         <div class="col-md-12">
-                            <div class="author-info-box d-none d-lg-block">
-                                <h3>Região do parceiro:</h3>
+                            <div class="author-info-box">
+                                <h3><?php echo get_theme_mod( 'dnaTheme_setting_rotuloRegiao') ?></h3>
                                 <div class="author-product mapa-parceiro"><?php echo $mapa ?></div>
                             </div>
                         </div>
