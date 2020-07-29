@@ -31,7 +31,7 @@ switch ($server_addr) {
 		break;
 	case '198.199.88.130': //digitalocean
         break;
-    default:
+    case '216.172.172.177': //dnaformarketing
         $dbhost_default = 'localhost';
         $dbname = 'dnafor70_solides_mktplace';
         $dbuser_default = 'dnafor70_solides';
@@ -39,6 +39,15 @@ switch ($server_addr) {
         $dev_mod = false;
         $wp_home = 'https://solidesmktplace.dnaformarketing.com.br/';
         $wp_siteurl = 'https://solidesmktplace.dnaformarketing.com.br/';
+        break;
+    default:
+        $dbhost_default = 'solides-server.coizjp8kk45g.us-east-1.rds.amazonaws.com';
+        $dbname = 'parcerias_usr_db';
+        $dbuser_default = 'parcerias_usr_usr';
+        $dbpassword_default = 'P@rceri@s2020';
+        $dev_mod = false;
+        $wp_home = 'https://parcerias.solides.com.br/';
+        $wp_siteurl = 'https://parcerias.solides.com.br/';
         break;
 }
 define ('WPLANG', 'pt_BR');
@@ -60,7 +69,7 @@ define( 'DB_PASSWORD', $dbpassword_default );
 define( 'DB_HOST', $dbhost_default );
 
 /** Charset do banco de dados a ser usado na criação das tabelas. */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8mb4' );
 
 /** O tipo de Collate do banco de dados. Não altere isso se tiver dúvidas. */
 define( 'DB_COLLATE', '' );
