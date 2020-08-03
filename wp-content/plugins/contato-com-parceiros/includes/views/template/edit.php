@@ -1,7 +1,16 @@
 <?php
+// pega o id do parceiro enviado como parametro se não tiver id, tchau e benção
+$idDoParceiro = $_GET[CCP_Table_ParceiroId];
+if(!isset($idDoParceiro)) die;
+// id do parceiro é inteiro
+$idDoParceiro = intval($idDoParceiro);
+/** informações do parceiro */
+$parceiroInf = get_post($idDoParceiro);
+/**página atual da paginação */
 $sheet = isset($_GET['sheet'])?$_GET['sheet']:1;
-$ccpData = queryAllData($sheet);
-$maxNumPages = getNumberOfPages();//é float,
+/** resultado da query por mensagens do parceiro */
+$ccpData = queryAllDataForParceiro($idDoParceiro, $sheet);
+$maxNumPages = getNumberOfPages($idDoParceiro);//é float,
 ?>
 <table class="wp-list-table widefat fixed striped posts">
 	<thead>
@@ -35,7 +44,6 @@ $maxNumPages = getNumberOfPages();//é float,
 			$ccpSite = $data[CCP_Table_Site];
 			$ccpTel = $data[CCP_Table_Tel];
 			$ccpMessage = $data[CCP_Table_Message];
-			$ccpParceiro = $data[CCP_Table_Parc];
 		?>
 		<tr class="linha"><!--procuro essa classe no javascript, não remova-->
 			<form action="<?php echo($_SERVER['REQUEST_URI']); ?>" method="POST">
@@ -43,7 +51,7 @@ $maxNumPages = getNumberOfPages();//é float,
 				<input type="hidden" value="<?php echo($ccpID); ?>" name="<?php echo CCP_Table_Id ?>">
 				<td class="title column-title has-row-actions column-primary" data-colname="Title">
 					<strong class="namedisplay">
-						<?php echo $ccpParceiro ?>
+						<?php echo $parceiroInf->post_title ?>
 					</strong>
 					<div class="row-actions">
 						<span class="trash trashLinks" msgOnClick="Quer Apagar?">

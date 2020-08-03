@@ -16,9 +16,10 @@ get_header();
         <?php
             echo($queriedObject->post_content);
             if (isset($_GET['parceiro'])){
+                $parceiroInf = get_post($_GET['parceiro']);
         ?>
         <p>
-            A mensagem foi enviada para: <?php echo($_GET['parceiro']); ?>
+            A mensagem foi enviada para: <?php echo($parceiroInf->post_title); ?>
         </p>
         <?php
             }

@@ -194,7 +194,7 @@ $mapa = $acfFields['mapa'];
                 </div>
                 <div class="modal-body">
                     <form action="/wp-json/dna_ccp/v1/parceiro" method="post" id="contatoParceiro">
-                        <input type="hidden" name="parceiro" value="<?php echo($queriedObject->post_title); ?>">
+                        <input type="hidden" name="parceiro" value="<?php echo($queriedObject->ID); ?>">
                         <input type="hidden" name="emailparceiro" value="<?php echo($email); ?>">
                         <div class="form-group">
                             <label for="nome">Nome</label>

@@ -20,7 +20,7 @@ function insertNewData($name, $email, $site, $tel, $message, $parceiro){
 		CCP_Table_Site => $site,
 		CCP_Table_Tel => $tel,
 		CCP_Table_Message => $message,
-		CCP_Table_Parc => $parceiro,
+		CCP_Table_ParceiroId => $parceiro,
 	);
 	$return = $wpdb->insert( CCP_Table, $array , CCP_Table_Format);
 	return $return;
@@ -75,18 +75,58 @@ function queryAllData($page = 1){
 }
 
 /**
+ * resgata entradas de um parceiro
+ * @param int $page
+ * @return ARRAY_A um array com os dados
+ * @author Vinicius de Santana
+ */
+function queryAllDataForParceiro($parceiro, $page = 1){
+	$page--; //sim, página 1 é igual a pagina 0 pro banco, duh!
+	if(!is_int($page) || $page<0) return null; //previne sql injection i pagina negativa
+	$numMaxPages = getNumberOfPages($parceiro);
+	if($page > $numMaxPages) return null;//quer página que não existe
+	
+	global $wpdb;
+	$qtdRownsPorPagina = get_option(CCP_ItensPorPagOption);
+	$rowRelativoAPagina = $qtdRownsPorPagina * $page;
+	$sql ="SELECT * FROM ".CCP_Table.
+			" WHERE ".CCP_Table_ParceiroId." = ".$parceiro.
+			" ORDER BY ".CCP_Table_Id." DESC".
+			" LIMIT ".$rowRelativoAPagina.",".$qtdRownsPorPagina;
+	$return = $wpdb->get_results( $sql, "ARRAY_A" );
+	return $return;
+}
+
+/**
  * Retorna quantidade de páginas possiveis
+ * o parametro id do parceiro caso queira a quantidade de páginas do post do parceiro
+ * @param int $idParceiro
  * @return int qutd de páginas possiveis
  * @author Vinicius de Santana
  */
-function getNumberOfPages(){
+function getNumberOfPages($idParceiro = null){
 	global $wpdb;
-	$sql ="SELECT COUNT(*) FROM ".CCP_Table;
+	$sql = "SELECT COUNT(*) FROM ".CCP_Table;
+	if($idParceiro){
+		$sql .= " WHERE ".CCP_Table_ParceiroId." = ".$idParceiro;
+	}
 	$resp = $wpdb->get_results( $sql, "ARRAY_A" );
 	$numRows = $resp[0]['COUNT(*)'];
 	$qtdRownsPorPagina = get_option(CCP_ItensPorPagOption);
 	$return = $numRows / $qtdRownsPorPagina;
 	return $return;
+}
+
+/**
+ * Retorna o total de mensagens de cada parceiro
+ * @return ARRAY_A um array com os dados
+ * @author Vinicius de Santana
+ */
+function getCountCadaParceiro(){
+	global $wpdb;
+	$sql = "SELECT idparceiro, COUNT(*) as qtd FROM ".CCP_Table." GROUP BY ".CCP_Table_ParceiroId;
+	$resp = $wpdb->get_results( $sql, "ARRAY_A" );
+	return $resp;
 }
 
 /**
@@ -98,7 +138,7 @@ function getNumberOfPages(){
 function queryDataById($id = 0){
 	if(!is_int($id)) return null; //previne sql injection
 	global $wpdb;
-	$sql ="SELECT * FROM ".CCP_Table_Name.
+	$sql ="SELECT * FROM ".CCP_Table.
 			" WHERE ".CCP_Table_Id."=".$id;
 	$return = $wpdb->get_row( $sql, "ARRAY_A" );
 	return $return;
@@ -113,7 +153,7 @@ function queryDataById($id = 0){
 function queryDataByName($name){
 	if(strpos($name, ';')) return null; //previne sql injection
 	global $wpdb;
-	$sql ="SELECT * FROM ".CCP_Table_Name.
+	$sql ="SELECT * FROM ".CCP_Table.
 			" WHERE ".CCP_Table_Name."='".$name."'";
 	$return = $wpdb->get_row( $sql, "ARRAY_A" );
 	return $return;

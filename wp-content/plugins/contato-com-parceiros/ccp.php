@@ -15,11 +15,11 @@ define('CCP_ItensPorPagOption', 'ccppageitens');
 define('CCP_Table', 'ccp_table');
 define('CCP_Table_Id', 'id');
 define('CCP_Table_Name', 'name');
+define('CCP_Table_ParceiroId', 'idparceiro');
 define('CCP_Table_Email', 'email');
 define('CCP_Table_Site', 'site');
 define('CCP_Table_Tel', 'tel');
 define('CCP_Table_Message', 'mensagem');
-define('CCP_Table_Parc', 'parceiro');
 define('CCP_Table_Format', array('%s','%s'));
 
 include_once CCP_PATH.'/includes/functions/bd.php';
@@ -43,7 +43,7 @@ function install(){
 			.CCP_Table_Site." VARCHAR(100) NOT NULL, "
 			.CCP_Table_Tel." VARCHAR(100) NOT NULL, "
 			.CCP_Table_Message." TEXT NOT NULL, "
-			.CCP_Table_Parc." VARCHAR(200) NOT NULL, "
+			.CCP_Table_ParceiroId." int NOT NULL, "
 			."PRIMARY KEY (".CCP_Table_Id."))"
 	);
 }

@@ -12,10 +12,11 @@ function dnaapi_ccp($req){
   $telefone = $req->get_param('telefone');
   $mensagem = $req->get_param('mensagem');
   $parceiro = $req->get_param('parceiro');
+  //parceiro é inteiro
+  $parceiro = intval($parceiro);
   $emailparceiro = $req->get_param('emailparceiro');
   //paranauê e aú sem mão
-  $identificaparceiro = $parceiro.', '.$emailparceiro;
-  $bdReturn = insertNewData($nome, $email, $website, $telefone, $mensagem, $identificaparceiro);
+  $bdReturn = insertNewData($nome, $email, $website, $telefone, $mensagem, $parceiro);
   // envia email
   $to = $emailparceiro;
   $subject = 'Sólides Market Place - contato com o parceiro';
