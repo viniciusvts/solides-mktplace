@@ -9,7 +9,6 @@
 get_header();
 
 global $themeplace_opt;
-
 $queriedObject = get_queried_object();
 $acfFields = get_fields($queriedObject->ID);
 $categories = wp_get_post_terms($queriedObject->ID, 'categoria_parceiros');
@@ -49,7 +48,7 @@ $mapa = $acfFields['mapa'];
                             <?php } ?>
                             <br/>
                             <h7><?php echo 'Parceiro desde: '.date_format(
-                                                date_create($queriedObject->post_date),"d M Y"
+                                                date_create($queriedObject->post_date),"d/m/Y"
                                             ); ?></h7>
                         </div>
                     </div>
