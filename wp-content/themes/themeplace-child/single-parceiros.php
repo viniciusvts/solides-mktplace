@@ -12,7 +12,7 @@ global $themeplace_opt;
 
 $queriedObject = get_queried_object();
 $acfFields = get_fields($queriedObject->ID);
-$categories = get_terms('categoria_parceiros', $queriedObject->ID);
+$categories = wp_get_post_terms($queriedObject->ID, 'categoria_parceiros');
 $img = $acfFields['foto'];
 $certs = $acfFields['certificados'];
 $nivelParc = $acfFields['nivel_parceiro'];
