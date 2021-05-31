@@ -2,7 +2,7 @@
 // recupera dados dos parceiros
 $args = array(
     'post_type' => 'parceiros',
-    
+    'nopaging' => true,
     'meta_query' => array(
         'relation' => 'AND',
         'nivel_parceiro_' => array(
