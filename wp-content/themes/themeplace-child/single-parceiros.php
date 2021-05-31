@@ -39,11 +39,11 @@ $mapa = $acfFields['mapa'];
                             <?php if ($endereco){ ?>
                             <h6 class="mb-2"><?php echo $endereco ?></h6>
                             <?php } if ($site){ ?>
-                            <a class="mt-0" href="<?php echo $site ?>">
+                            <a class="mt-0 d-block" href="<?php echo $site ?>">
                                 <h6 class="mb-2"><?php echo $site ?></h6>
                             </a>
                             <?php } if ($email){ ?>
-                            <a class="mt-0 mb-3" href="mailto:<?php echo $email ?>">
+                            <a class="mt-0 mb-3 d-block" href="mailto:<?php echo $email ?>">
                                 <h6 class="mb-2"><?php echo $email ?></h6>
                             </a>
                             <?php } ?>
