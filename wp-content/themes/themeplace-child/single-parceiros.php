@@ -151,12 +151,16 @@ $mapa = $acfFields['mapa'];
                                     $certEmissao = $cert['data_emissao'];
                                 ?>
                                     <li class="list-inline-item scale-on-hover col-6 col-lg-3 p-3"
-                                    style="margin-bottom: 1rem !important;">
+                                    style="margin-bottom: 1rem !important;padding-bottom: 1rem !important;">
                                         <img src="<?php echo $certImage['sizes']['thumbnail'] ?>"
                                         alt="<?php echo $certImage{'alt'} ?>">
                                         <b><?php echo $certNome ?></b>
-                                        Emitido em:
-                                        <?php echo $certEmissao ?>
+                                        <?php
+                                        // if ($certEmissao){
+                                        //     echo 'Emitido em: ';
+                                        //     echo $certEmissao;
+                                        // }
+                                        ?>
                                     </li>
                                 <?php
                                 }
