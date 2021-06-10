@@ -13,14 +13,12 @@ get_header();
                             $link = get_permalink(get_the_ID());
                             $acfFields = get_fields(get_the_ID());
                             $img = $acfFields['foto'];
-                            $certs = $acfFields['certificados'];
                             $nivelParc = $acfFields['nivel_parceiro'];
                     ?>
                     <div class="col-md-6 col-lg-4 <?php echo $nivelParc['value'] ?>">
                         <div class="download-item">
                             <div class="download-item-image">
                                 <a href="<?php echo $link ?>">
-                                    <h5 class="nivel-parc <?php echo $nivelParc['value'] ?>"><?php echo $nivelParc['label'] ?></h5>
                                     <img width="100%" height="auto" 
                                     src="<?php echo $img['sizes']['medium'] ?>" 
                                     class="attachment-post-thumbnail size-post-thumbnail wp-post-image"

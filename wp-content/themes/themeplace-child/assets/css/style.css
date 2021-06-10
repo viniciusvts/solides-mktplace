@@ -26,8 +26,31 @@ h5.nivel-parc.val5{
     margin-right: 20px;
 }
 .infodna h6{
-    font-size: 20px;
+    font-size: 13px;
+}
+.infodna a{
+    text-align: center;
 }
 .infodna a h6:hover{
     text-decoration: underline;
+}
+.acao > a{
+    border: 1px solid;
+    border-radius: 50px;
+    border-color: #2f0a77;
+    padding: 0 15px;
+}
+.acao > a:hover{
+    background: #2f0a77!important;
+    color: #fff !important;
+}
+@media (min-width: 768px) {
+    .infodna h6{
+        font-size: 20px;
+    }
+}
+@media (min-width: 1200px) {
+    .infodna a{
+        text-align: left;
+    }
 }

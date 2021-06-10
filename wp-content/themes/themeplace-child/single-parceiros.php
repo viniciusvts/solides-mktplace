@@ -22,6 +22,7 @@ $email = $acfFields['email'];
 $site = $acfFields['site'];
 $linkedin = $acfFields['linkedin'];
 $telefone = $acfFields['telefone'];
+$univSolides = $acfFields['univSolides'];
 $mapa = $acfFields['mapa'];
 ?>
     <section class="themeplace-page-section">
@@ -47,7 +48,7 @@ $mapa = $acfFields['mapa'];
                 </div>
                 <div class="col-md-4">
                     <div class="author-info-box mb-0 h-100 d-flex">
-                        <div class="menu-item menu-login-url m-auto" style="margin-right: auto!important;margin-left: auto!important;">
+                        <div class="acao menu-login-url m-auto" style="margin-right: auto!important;margin-left: auto!important;">
                             <a class="p-2 px-4" href="#contato"
                             data-toggle="modal" data-target="#DNAmodal">Contato</a>
                         </div>
@@ -73,10 +74,10 @@ $mapa = $acfFields['mapa'];
                         </ul>
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-md-8">
                     <div class="row">
                         <div class="col-12 mb-4">
-                            <div class="author-info-box w-100 m-0 px-5 text-left infodna">
+                            <div class="author-info-box w-100 m-0 px-5 infodna">
                                 <?php
                                 if ($site){
                                 ?>
@@ -118,13 +119,17 @@ $mapa = $acfFields['mapa'];
                                     </a>
                                 <?php
                                 }
+                                if ($univSolides){
                                 ?>
-                                <a class="mt-0 d-block" href="https://universidade.solides.com.br/">
+                                <a class="mt-0 d-block" href="<?php echo $univSolides ?>">
                                     <h6 class="mb-0">
                                         <img class="data-icone" src="<?php echo(get_stylesheet_directory_uri()); ?>/assets/img/logo-solides.png" alt="">
-                                        https://universidade.solides.com.br/
+                                        <?php echo $univSolides ?>
                                     </h6>
                                 </a>
+                                <?php
+                                }
+                                ?>
                                 <!-- <h7><?php echo 'Parceiro desde: '.date_format(
                                                     date_create($queriedObject->post_date),"d/m/Y"
                                                 ); ?></h7> -->
@@ -153,7 +158,7 @@ $mapa = $acfFields['mapa'];
                 <?php
                 if($certs){
                 ?>
-                <div class="col-md-12 mb-4">
+                <!-- <div class="col-md-12 mb-4">
                     <div class="author-info-box mb-0">
                         <h3><?php echo get_theme_mod( 'dnaTheme_setting_rotuloCertificados') ?></h3>
                         <ul class="list-inline author-product">
@@ -181,7 +186,7 @@ $mapa = $acfFields['mapa'];
                         ?>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <?php
                 }
                 if ($mapa){

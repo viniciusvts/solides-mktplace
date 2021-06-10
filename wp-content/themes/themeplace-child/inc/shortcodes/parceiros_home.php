@@ -52,7 +52,6 @@ $parcL = array_unique($parcL);
             $link = get_permalink($parc->ID);
             $acfFields = get_fields($parc->ID);
             $img = $acfFields['foto'];
-            $certs = $acfFields['certificados'];
             $nivelParc = $acfFields['nivel_parceiro'];
         ?>
         <div class="col-md-3 col-sm-4 col-xs-6 <?php echo $nivelParc['value'] ?>"
@@ -60,7 +59,6 @@ $parcL = array_unique($parcL);
             <div class="download-item">
                 <div class="download-item-image">
                     <a href="<?php echo $link ?>">
-                        <h5 class="nivel-parc <?php echo $nivelParc['value'] ?>"><?php echo $nivelParc['label'] ?></h5>
                         <img width="1280" height="720" 
                         src="<?php echo $img['sizes']['medium'] ?>" 
                         class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
