@@ -62,7 +62,7 @@ $mapa = $acfFields['mapa'];
                             <?php
                             foreach ($categories as $cat) {
                                 /**adicionar ao final o slug da categoria */
-                                $url = 'http://solides_mktplace.localhost/?s=&post_type=parceiros&categoria_parceiros=';
+                                $url = get_site_url().'/?s=&post_type=parceiros&categoria_parceiros=';
                             ?>
                                 <li class="mb-2">
                                     <a href="<?php echo $url.$cat->slug ?>"><?php echo $cat->name ?></a>
