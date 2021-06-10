@@ -1,0 +1,23 @@
+
+h5.nivel-parc{
+    position: absolute;
+    padding: 10px 15px;
+    background-color: #fafafa;
+}
+h5.nivel-parc.val1{
+    color: white;
+    background-color: #cd7f32;
+}
+h5.nivel-parc.val2{
+    background-color: silver;
+}
+h5.nivel-parc.val3{
+    background-color: gold;
+}
+h5.nivel-parc.val4{
+    background-color: #6BABB1;
+}
+h5.nivel-parc.val5{
+    color: white;
+    background-color: #6BABB1;
+}

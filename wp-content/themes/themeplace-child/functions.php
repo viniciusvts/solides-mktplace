@@ -16,3 +16,4 @@ include_once 'custom_posts/certificados.php';
 include_once 'custom_posts/parceiros.php';
 include_once 'inc/customizer.php';
 include_once 'inc/shortcode.php';
+include_once 'inc/loadSources.php';

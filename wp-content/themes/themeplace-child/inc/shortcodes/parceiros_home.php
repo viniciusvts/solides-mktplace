@@ -13,23 +13,37 @@ $args = array(
         ), 
     ),
     'orderby' => array( 
-        'nivel_parceiro_' => 'DESC',
+        'nivel_parceiro_' => 'ASC',
         'score_' => 'DESC',
     ),
 );
 $query = new WP_Query($args);
 $parceiros = $query->posts;
 $acf = '';
+// para pegar tdos os niveis de parceiros que possuem 1 ou mais parceiros cadastrados
+$parcNiveis = [];
+foreach ($parceiros as $parc) {
+    $acfFields = get_fields($parc->ID);
+    $nivelParc = $acfFields['nivel_parceiro'];
+    $parcV[] = $nivelParc['value'];
+    $parcL[] = $nivelParc['label'];
+}
+$parcV = array_unique($parcV);
+$parcL = array_unique($parcL);
 ?>
 <div class="container">
     <div class="download-filter">
         <ul class="list-inline">
             <li class="select-cat list-inline-item" data-filter="*">Todos</li>
-            <li class="list-inline-item" data-filter=".val5">Diamond</li>
-            <li class="list-inline-item" data-filter=".val4">Platinum</li>
-            <li class="list-inline-item" data-filter=".val3">Gold</li>
-            <li class="list-inline-item" data-filter=".val2">Silver</li>
-            <li class="list-inline-item" data-filter=".val1">Bronze</li>
+            <?php
+            foreach ($parcV as $key => $p) {
+            ?>
+            <li class="list-inline-item" data-filter=".<?php echo $parcV[$key]; ?>">
+                <?php echo $parcL[$key]; ?>
+            </li>
+            <?php
+            }
+            ?>
         </ul>
     </div>
     <div class="download_items row" style="position: relative; height: 3234.75px;">
@@ -60,27 +74,3 @@ $acf = '';
         ?>
     </div>
 </div>
-<style>
-h5.nivel-parc{
-    position: absolute;
-    padding: 10px 15px;
-    background-color: #fafafa;
-}
-h5.nivel-parc.val1{
-    color: white;
-    background-color: #cd7f32;
-}
-h5.nivel-parc.val2{
-    background-color: silver;
-}
-h5.nivel-parc.val3{
-    background-color: gold;
-}
-h5.nivel-parc.val4{
-    background-color: #6BABB1;
-}
-h5.nivel-parc.val5{
-    color: white;
-    background-color: #6BABB1;
-}
-</style>
