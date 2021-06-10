@@ -20,11 +20,13 @@ $link = $acfFields['link'];
 $endereco = $acfFields['endereco'];
 $email = $acfFields['email'];
 $site = $acfFields['site'];
+$linkedin = $acfFields['linkedin'];
+$telefone = $acfFields['telefone'];
 $mapa = $acfFields['mapa'];
 ?>
     <section class="themeplace-page-section">
         <div class="container">
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-md-4">
                     <div class="author-profile-sidebar">
                         <div class="author-info">
@@ -35,50 +37,27 @@ $mapa = $acfFields['mapa'];
                                 alt="<?php echo $img['alt'] ?>">
                             </div>
                             <h3><?php echo $queriedObject->post_title; ?></h3>
-                            <?php if ($endereco){ ?>
-                            <h6 class="mb-2"><?php echo $endereco ?></h6>
-                            <?php } if ($site){ ?>
-                            <a class="mt-0 d-block" href="<?php echo $site ?>">
-                                <h6 class="mb-2"><?php echo $site ?></h6>
-                            </a>
-                            <?php } if ($email){ ?>
-                            <a class="mt-0 mb-3 d-block" href="mailto:<?php echo $email ?>">
-                                <h6 class="mb-2"><?php echo $email ?></h6>
-                            </a>
-                            <?php } ?>
-                            <br/>
-                            <h7><?php echo 'Parceiro desde: '.date_format(
-                                                date_create($queriedObject->post_date),"d/m/Y"
-                                            ); ?></h7>
                         </div>
                     </div>
-                    <?php if ($certs){ ?>
-                    <div class="author-info-box d-lg-none">
-                        <h2 class="widget-title d-lg-none"><?php echo get_theme_mod( 'dnaTheme_setting_rotuloCertificados') ?></h2>
-                        <ul class="list-inline author-product d-lg-none" style="border:0;">
-                            <?php
-                            foreach ($certs as $cert) {
-                                $certFields = get_fields($cert['certificado']->ID);
-                                $certImage = $certFields['imagem'];
-                                $certNome = $cert['certificado']->post_title;
-                                $certEmissao = $cert['data_emissao'];
-                            ?>
-                                <li class="list-inline-item scale-on-hover col-6 col-lg-3 p-3"
-                                style="margin-bottom: 1rem !important;">
-                                    <img src="<?php echo $certImage['sizes']['thumbnail'] ?>"
-                                    alt="<?php echo $certImage{'alt'} ?>">
-                                    <b><?php echo $certNome ?></b>
-                                    Emitido em:
-                                    <?php echo $certEmissao ?>
-                                </li>
-                            <?php
-                            }
-                            ?>
-                        </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="author-info-box mb-0 h-100 d-flex">
+                        <h3 class="text-center m-auto">BUSSINESS<br> <?php echo $nivelParc['label'] ?></h3>
                     </div>
-                    <?php } if($categories){ ?>
-                    <div class="author-info-box my-4">
-                        <h2 class="widget-title "><?php echo get_theme_mod( 'dnaTheme_setting_rotuloCategorias') ?></h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="author-info-box mb-0 h-100 d-flex">
+                        <div class="menu-item menu-login-url m-auto" style="margin-right: auto!important;margin-left: auto!important;">
+                            <a class="p-2 px-4" href="#contato"
+                            data-toggle="modal" data-target="#DNAmodal">Contato</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="author-info-box m-0 h-100">
+                        <h3 class="widget-title mb-4">ÁREAS DE ATUAÇÃO</h2>
                         <ul class="list-inline" style="border:0;">
                             <?php
                             foreach ($categories as $cat) {
@@ -93,95 +72,129 @@ $mapa = $acfFields['mapa'];
                             ?>
                         </ul>
                     </div>
-                    <?php } ?>
                 </div>
-                <div class="col-md-8">
+                <div class="col-8">
                     <div class="row">
-                        <?php
-                        if ($nivelParc) {
-                        ?>
-                        <div class="col-md-<?php if ($email) { echo('6'); } else { echo('12'); } ?>">
-                            <div class="author-info-box">
-                                <p><?php echo get_theme_mod( 'dnaTheme_setting_rotuloNivelParceiro') ?></p>
-                                <h3>
-                                <?php echo $nivelParc['label'] ?></h3>
-                            </div>
-                        </div>
-                        <?php
-                        }
-                        if ($email) {
-                        ?>
-                        <div class="col-md-<?php if ($nivelParc) { echo('6'); } else { echo('12'); } ?>">
-                            <div class="author-info-box">
-                                <div class="menu-item menu-login-url mt-4" style="display:block!important;">
-                                    <a class="p-2 px-4" href="#contato"
-                                    data-toggle="modal" data-target="#DNAmodal">Contato</a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                        }
-                        ?>
-                    </div>
-
-                    <div class="row">
-                        <?php
-                        if ($sobre){
-                        ?>
-                        <div class="col-md-12">
-                            <div class="author-info-box px-5">
-                                <h3 class="mb-4"><?php echo get_theme_mod( 'dnaTheme_setting_rotuloSobre') ?></h3>
-                                <?php echo $sobre; ?>
-                            </div>
-                        </div>
-                        <?php
-                        }
-                        if ($certs){
-                        ?>
-                        <div class="col-md-12">
-                            <div class="author-info-box d-none d-lg-block">
-                                <h3><?php echo get_theme_mod( 'dnaTheme_setting_rotuloCertificados') ?></h3>
-                                <ul class="list-inline author-product">
+                        <div class="col-12 mb-4">
+                            <div class="author-info-box w-100 m-0 px-5 text-left infodna">
                                 <?php
-                                foreach ($certs as $cert) {
-                                    $certFields = get_fields($cert['certificado']->ID);
-                                    $certImage = $certFields['imagem'];
-                                    $certNome = $cert['certificado']->post_title;
-                                    $certEmissao = $cert['data_emissao'];
+                                if ($site){
                                 ?>
-                                    <li class="list-inline-item scale-on-hover col-6 col-lg-3 p-3"
-                                    style="margin-bottom: 1rem !important;padding-bottom: 1rem !important;">
-                                        <img src="<?php echo $certImage['sizes']['thumbnail'] ?>"
-                                        alt="<?php echo $certImage{'alt'} ?>">
-                                        <b><?php echo $certNome ?></b>
-                                        <?php
-                                        // if ($certEmissao){
-                                        //     echo 'Emitido em: ';
-                                        //     echo $certEmissao;
-                                        // }
-                                        ?>
-                                    </li>
+                                    <a class="mt-0 mb-3 d-block" href="<?php echo $site ?>">
+                                        <h6>
+                                            <img class="data-icone" src="<?php echo(get_stylesheet_directory_uri()); ?>/assets/img/globe-solid.svg" alt="">
+                                            <?php echo $site ?>
+                                        </h6>
+                                    </a>
+                                <?php
+                                }
+                                if ($linkedin){
+                                ?>
+                                    <a class="mt-0 mb-3 d-block" href="<?php echo $linkedin ?>">
+                                        <h6>
+                                            <img class="data-icone" src="<?php echo(get_stylesheet_directory_uri()); ?>/assets/img/linkedin-in-brands.svg" alt="">
+                                            <?php echo $linkedin ?>
+                                        </h6>
+                                    </a>
+                                <?php
+                                }
+                                if ($email){
+                                ?>
+                                    <a class="mt-0 mb-3 d-block" href="mailto:<?php echo $email ?>">
+                                        <h6>
+                                            <img class="data-icone" src="<?php echo(get_stylesheet_directory_uri()); ?>/assets/img/envelope-solid.svg" alt="">
+                                            <?php echo $email ?>
+                                        </h6>
+                                    </a>
+                                <?php
+                                }
+                                if ($telefone){
+                                ?>
+                                    <a class="mt-0 mb-3 d-block" href="tel:<?php echo $telefone ?>">
+                                        <h6>
+                                            <img class="data-icone" src="<?php echo(get_stylesheet_directory_uri()); ?>/assets/img/phone-alt-solid.svg" alt="">
+                                            <?php echo $telefone ?>
+                                        </h6>
+                                    </a>
                                 <?php
                                 }
                                 ?>
-                                </ul>
+                                <a class="mt-0 d-block" href="https://universidade.solides.com.br/">
+                                    <h6 class="mb-0">
+                                        <img class="data-icone" src="<?php echo(get_stylesheet_directory_uri()); ?>/assets/img/logo-solides.png" alt="">
+                                        https://universidade.solides.com.br/
+                                    </h6>
+                                </a>
+                                <!-- <h7><?php echo 'Parceiro desde: '.date_format(
+                                                    date_create($queriedObject->post_date),"d/m/Y"
+                                                ); ?></h7> -->
                             </div>
                         </div>
-                        <?php
-                        }
-                        if ($mapa){
-                        ?>
-                        <div class="col-md-12">
-                            <div class="author-info-box">
-                                <h3><?php echo get_theme_mod( 'dnaTheme_setting_rotuloRegiao') ?></h3>
-                                <div class="author-product mapa-parceiro"><?php echo $mapa ?></div>
-                            </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <?php
+                                if ($sobre){
+                                ?>
+                                <div class="col-md-12">
+                                    <div class="author-info-box mb-0 px-5">
+                                        <h3 class="widget-title mb-4">SOBRE</h2>
+                                        <?php echo $sobre; ?>
+                                    </div>
+                                </div>
+                                <?php
+                                }
+                                ?>
+                            </div>                    
                         </div>
-                        <?php
-                        }
-                        ?>
-                    </div>                    
+                    </div>
                 </div>
+            </div>
+            <div class="row">
+                <?php
+                if($certs){
+                ?>
+                <div class="col-md-12 mb-4">
+                    <div class="author-info-box mb-0">
+                        <h3><?php echo get_theme_mod( 'dnaTheme_setting_rotuloCertificados') ?></h3>
+                        <ul class="list-inline author-product">
+                        <?php
+                        foreach ($certs as $cert) {
+                            $certFields = get_fields($cert['certificado']->ID);
+                            $certImage = $certFields['imagem'];
+                            $certNome = $cert['certificado']->post_title;
+                            $certEmissao = $cert['data_emissao'];
+                        ?>
+                            <li class="list-inline-item scale-on-hover col-6 col-lg-3 p-3"
+                            style="margin-bottom: 1rem !important;padding-bottom: 1rem !important;">
+                                <img src="<?php echo $certImage['sizes']['thumbnail'] ?>"
+                                alt="<?php echo $certImage{'alt'} ?>">
+                                <b><?php echo $certNome ?></b>
+                                <?php
+                                // if ($certEmissao){
+                                //     echo 'Emitido em: ';
+                                //     echo $certEmissao;
+                                // }
+                                ?>
+                            </li>
+                        <?php
+                        }
+                        ?>
+                        </ul>
+                    </div>
+                </div>
+                <?php
+                }
+                if ($mapa){
+                ?>
+                <div class="col-md-12">
+                    <div class="author-info-box">
+                        <h3><?php echo get_theme_mod( 'dnaTheme_setting_rotuloRegiao') ?></h3>
+                        <div class="author-product mapa-parceiro"><?php echo $mapa ?></div>
+                    </div>
+                </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </section>

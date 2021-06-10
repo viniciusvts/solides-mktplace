@@ -21,3 +21,13 @@ h5.nivel-parc.val5{
     color: white;
     background-color: #6BABB1;
 }
+.infodna img.data-icone{
+    height: 25px;
+    margin-right: 20px;
+}
+.infodna h6{
+    font-size: 20px;
+}
+.infodna a h6:hover{
+    text-decoration: underline;
+}
