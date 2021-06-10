@@ -30,7 +30,7 @@ get_header();
                         </div>
                     </div>
                     <?php
-                        }
+                        } // end while
                     } else {
                         get_template_part( 'template-parts/content', 'none' );
                     }
